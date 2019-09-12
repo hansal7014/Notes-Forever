@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+    color: #ffffff;
+    font-family: 'Alegreya', serif;
+}
+.navbar{
+    color: #ffffff;
+}
+.navbar-brand{
+  font-family: 'Dancing Script', cursive;
+  font-size: 2em;
+}
+.main{
+  text-align: center; 
+  margin: 4em;
+}
