@@ -15,7 +15,7 @@ body{
   color: #ffffff;
 
 }
-.col-sm, #notepad{
+.col-sm, #notepad, nes-textarea{
   background-color: #FFFFFF;
   margin: 1em;
   height: 6em;

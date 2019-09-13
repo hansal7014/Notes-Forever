@@ -4,6 +4,14 @@ var noteCount = 0;
 var rowCount = 1;
 
 window.addEventListener('DOMContentLoaded', (event) => {
+    fs.readFile('/note', 'utf8', function (err, data) {
+        if (err) {
+            document.querySelector('#note').innerHTML = 'Type Notes Here';
+        }
+        if (data) {
+            document.querySelector('#note').innerHTML = data;
+        }
+    });
     function readData(fileName){
         fs.readFile(fileName, 'utf8', function (err, data) {
             if (err) {
@@ -29,12 +37,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
         var title = trigger.data('title');
         var file = trigger.data('file');
         var isNewNote = ( "BUTTON" == event.relatedTarget.nodeName);
-        document.querySelector('#noteTitle').innerHTML = title + noteCount;
+        document.querySelector('#noteTitle').innerHTML = title;
         if(!isNewNote){
             readData("/" + file);
         }else{
             noteCount++;
-            file = "/" + noteCount;
+            file = "/note" + noteCount;
             addNote("note" + noteCount, title, (noteCount % 3 == 1));
         }
         t = setInterval(() => { saveData(file) }, 2000);
@@ -74,7 +82,11 @@ function addNote(noteId, title, isNewRow) {
    // } 
 }
 
+function saveNote() {
+    fs.writeFile('/note', document.querySelector('#note').innerHTML);
+}
 
+setInterval(() => { this.saveNote() }, 2500);
 
 
 

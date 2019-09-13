@@ -19,7 +19,7 @@
                 Notes Forever
             </a>       
             <form class="form-inline">
-                <button class="btn btn-light btn-outline-success btn-lg my-2 my-sm-0" type="button" data-toggle="modal" data-target="#noteModal" data-title="Note" data-file="notes">
+                <button class="btn btn-light btn-outline-success btn-lg my-2 my-sm-0" type="button" data-toggle="modal" data-target="#noteModal" data-title="Note Title" data-file="notes">
                     <i class="fas fa-plus-circle"></i>
                     Add Note
                 </button>         
@@ -55,6 +55,8 @@
         </div>
         <div class="main">
             <h1>Welcome! Start by adding your notes....</h1>
+            <div style="min-height: 250px; border: 2px solid white;" id="note" contenteditable class="nes-textarea"></div>
+            <button style="margin: 1em;" type="button" class="btn btn-success" onclick="saveNote()">Save</button>
             <div class="container">
                     <div class="row" id="noteGrid">
                          
