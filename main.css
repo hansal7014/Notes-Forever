@@ -1,6 +1,5 @@
 body{
     background-color: black;
-    color: #ffffff;
     font-family: 'Alegreya', serif;
 }
 .navbar{
@@ -13,4 +12,15 @@ body{
 .main{
   text-align: center; 
   margin: 4em;
+  color: #ffffff;
+
+}
+.col-sm, #notepad{
+  background-color: #FFFFFF;
+  margin: 1em;
+  height: 6em;
+  color: #000000;
+}
+.nBody{
+  text-align: left;   
 }
